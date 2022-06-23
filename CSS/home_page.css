@@ -1,0 +1,444 @@
+body {
+  margin: 1.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #dbdee0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 25em;
+  height: 3.5em;
+  padding: .5em 0 0 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header svg {
+  width: 2em;
+  margin-top: -.6em;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: none;
+  margin: .5em 0 0 0;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: #393939;
+  width: 20%;
+  z-index: 20;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8em;
+}
+
+nav ul a {
+  padding: .75em 2em;
+  display: block;
+}
+
+nav ul a:hover {
+  background: silver;
+}
+
+nav .close {
+  float: right;
+  margin: 1em;
+  width: 2em;
+}
+
+.icons {
+  width: 2em;
+  height: 2em;
+}
+
+.mobile-icon {
+  margin-top: .75em;
+  width: 2em;
+  height: 2em;
+}
+
+.selections {
+  display: block;
+  background-color: silver;
+}
+
+.selections hr {
+  margin: 0;
+}
+
+.selections ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.selections ul li {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  position: relative;
+}
+
+.selections ul p {
+  padding: .5em 0;
+  margin: 0;
+}
+
+.selections ul p:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: silver;
+}
+
+.selections ul p::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #393939;
+  position: absolute;
+  left: 0;
+  bottom: -.5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.selections ul p:hover::after {
+  width: 100%;
+}
+
+.women:hover .women-selections {
+  display: block;
+}
+
+.men:hover .men-selections {
+  display: block;
+}
+
+.girls:hover .girls-selections {
+  display: block;
+}
+
+.boys:hover .boys-selections {
+  display: block;
+}
+
+.sec-selections {
+  display: none;
+  position: absolute;
+  background-color: black;
+  color: silver;
+  width: 100%;
+  z-index: 99;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8.9em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero div {
+  text-align: center;
+}
+
+.hero div .title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.hero div img {
+  width: 100%;
+  height: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
+}
+
+.hero div .description {
+  font-size: 1.25em;
+}
+
+.hero div .buy-now {
+  width: 50%;
+  height: 2em;
+}
+
+.shop-now {
+  width: 30%;
+  height: 2em;
+  margin: 0 5%;
+}
+
+button {
+  background-color: #393939;
+  border-radius: 15px;
+  color: silver;
+  border: none;
+}
+
+button:hover {
+  background-color: silver;
+  color: black;
+}
+
+.top-clothes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 4em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+
+.official-partners p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.official-partners div {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.official-partners div img {
+  width: 10%;
+  height: 10%;
+  padding: 1em 5em;
+}
+
+.open-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.open-search {
+  height: 100vh;
+  background: #393939;
+  width: 20%;
+  right: 5em;
+  top: 1em;
+  width: 100px;
+  height: 20px;
+  padding: 15px;
+  z-index: 20;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  display: block;
+  position: fixed;
+}
+
+.open-search .mobile-search-close {
+  display: block;
+  position: fixed;
+  right: 1em;
+  top: .5em;
+}
+
+.open-search a .search {
+  border-radius: 180px;
+}
+
+.mobile-search-close {
+  display: none;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: .1em;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer div ul {
+  padding: 0 1em;
+}
+
+footer div ul li {
+  list-style: none;
+}
+
+footer hr {
+  display: none;
+}
+
+.social-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: 1.5em;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 4em;
+  }
+  .hero div img {
+    height: 30em;
+  }
+  .top-clothes {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .hero div {
+    margin: 0 7em;
+  }
+  .buy-now {
+    width: 15em;
+    height: 3em;
+    margin: 1em 5em;
+  }
+  .shop-now {
+    width: 15em;
+    height: 3em;
+    margin: 0 8em;
+  }
+  .mobile-icon {
+    display: none;
+  }
+  .search-bar {
+    display: block;
+    position: unset;
+  }
+  .search-bar a .search {
+    border-radius: 180px;
+    width: 400px;
+    height: 50px;
+    padding: 15px;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    padding: .5em 1.8em;
+  }
+  nav ul a:hover {
+    background: none;
+  }
+  .icons {
+    width: 3em;
+    height: 3em;
+    border: 2.2px solid #dbdee0;
+  }
+  .icons:hover {
+    border-radius: 180px;
+    border-color: black;
+  }
+  .social-icons {
+    -ms-grid-columns: (auto)[5];
+        grid-template-columns: repeat(5, auto);
+    gap: .5em;
+  }
+  footer hr {
+    display: inherit;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .top-clothes {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+  }
+  .hero {
+    gap: em;
+  }
+  .hero div img {
+    height: 30em;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .logo {
+    margin: 0 2em 0 10em;
+  }
+  .top-clothes {
+    -ms-grid-columns: (auto)[5];
+        grid-template-columns: repeat(5, auto);
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  to {
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  to {
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
+  }
+}
+/*# sourceMappingURL=home_page.css.map */
