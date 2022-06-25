@@ -43,6 +43,13 @@ h1{
 .wrapper{
     width: 60%;
     margin: auto;
+    input{
+        text-align: center;
+        width: 25em;
+        height: 25px;
+        border-radius: 15px;
+        border: 3px solid rgb(171, 207, 235);
+    }
 }
 
 .category{
@@ -85,14 +92,23 @@ tr:hover {
     background-color: #bfd2da;
 }
 
-.edit-button{
-    margin: 5px 0 0 0;
-}
 .top-edit-button{
     svg{
-   height: 1em;
-    width: 1em;
-    margin: 0;   
+   height: 1.3em;
+    width: 1.3em;
+    margin: 0 8px 0 0;
+    stroke: white;  
+    path{
+        fill: white;
+    } 
+    }
+    &:hover{
+        svg{
+            stroke: black;
+            path{
+                fill: black;
+            }
+        }
     }
  
 }
@@ -100,21 +116,46 @@ tr:hover {
     margin: 5px 0 0 0;
 }
 
-.edit-button:hover{
-    background-color: rgb(57,57, 57);
-    border-radius: 5px;
-}
 .delete-button:hover{
     background-color: rgb(248, 68, 68);
     border-radius: 5px;
 }
 
 .edit-div{
-    position: fixed;
-    top: 50px;
-    right: 10px;
-    background-color: rgb(255, 255, 255);
+    input{
+        width: 5em;
+        height: 25px;
+        border-radius: 15px;
+        border: 3px solid rgb(171, 207, 235);
+    }
 }
 
+.fixed-header{
+    padding-top: .5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    background-color: #0ABAB5;
+    div{
+        position: fixed;
+        right: 5em;
+        top: .5em;
+    }
 
+}
+
+.users-table{
+    margin-top: 6em;
+}
+
+.edit-intro{
+    margin-top: 3.2em;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(57,57, 57);
+}
 

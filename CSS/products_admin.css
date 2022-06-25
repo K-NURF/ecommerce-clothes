@@ -44,6 +44,14 @@ h1 {
   margin: auto;
 }
 
+.wrapper input {
+  text-align: center;
+  width: 25em;
+  height: 25px;
+  border-radius: 15px;
+  border: 3px solid #abcfeb;
+}
+
 .category {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,23 +99,27 @@ tr:hover {
   background-color: #bfd2da;
 }
 
-.edit-button {
-  margin: 5px 0 0 0;
+.top-edit-button svg {
+  height: 1.3em;
+  width: 1.3em;
+  margin: 0 8px 0 0;
+  stroke: white;
 }
 
-.top-edit-button svg {
-  height: 1em;
-  width: 1em;
-  margin: 0;
+.top-edit-button svg path {
+  fill: white;
+}
+
+.top-edit-button:hover svg {
+  stroke: black;
+}
+
+.top-edit-button:hover svg path {
+  fill: black;
 }
 
 .delete-button {
   margin: 5px 0 0 0;
-}
-
-.edit-button:hover {
-  background-color: #393939;
-  border-radius: 5px;
 }
 
 .delete-button:hover {
@@ -115,10 +127,37 @@ tr:hover {
   border-radius: 5px;
 }
 
-.edit-div {
+.edit-div input {
+  width: 5em;
+  height: 25px;
+  border-radius: 15px;
+  border: 3px solid #abcfeb;
+}
+
+.fixed-header {
+  padding-top: .5em;
   position: fixed;
-  top: 50px;
-  right: 10px;
-  background-color: white;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #0ABAB5;
+}
+
+.fixed-header div {
+  position: fixed;
+  right: 5em;
+  top: .5em;
+}
+
+.users-table {
+  margin-top: 6em;
+}
+
+.edit-intro {
+  margin-top: 3.2em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #393939;
 }
 /*# sourceMappingURL=products_admin.css.map */
