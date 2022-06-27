@@ -112,9 +112,17 @@ nav .close {
   margin: 0;
 }
 
+.selections ul p a {
+  text-decoration: none;
+  color: black;
+}
+
 .selections ul p:hover {
   text-decoration: underline;
   background-color: black;
+}
+
+.selections ul p:hover a {
   color: silver;
 }
 
@@ -228,6 +236,11 @@ button:hover {
   margin-top: 2em;
 }
 
+.gallery-item {
+  padding: .7em;
+  border: 1px solid #b2b0b0;
+}
+
 .official-partners p {
   font-size: 1.5em;
   text-align: center;
@@ -312,6 +325,19 @@ footer hr {
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
   gap: 1.5em;
+}
+
+.fixed-header {
+  padding-top: .5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0ABAB5;
 }
 
 @media only screen and (min-width: 680px) {
