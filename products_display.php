@@ -29,7 +29,7 @@
 
             require("connect.php");
 
-            $sql = "SELECT * FROM `products`";
+            $sql = "SELECT * FROM `products` WHERE `is_deleted` = 0";
             $result = mysqli_query($conn, $sql);
 
             echo "<table>";

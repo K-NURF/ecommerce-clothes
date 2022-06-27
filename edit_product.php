@@ -52,7 +52,7 @@
 
         <button type="submit">Save</button>
         </form>
-        <a href="users_display.php"><button>Cancel</button></a>
+        <a href="products_display.php"><button>Cancel</button></a>
 
     </div>
     
