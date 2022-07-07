@@ -20,6 +20,15 @@ button:hover {
   color: black;
 }
 
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  color: black;
+}
+
 h1 {
   color: #3AC1F2;
 }
@@ -159,5 +168,46 @@ tr:hover {
   font-size: 2em;
   font-weight: bold;
   color: #393939;
+}
+
+.icons {
+  width: 3em;
+  height: 3em;
+  border: 2.2px solid #0ABAB5;
+}
+
+.icons:hover {
+  border-radius: 180px;
+  border-color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.profile-pic {
+  width: 3em;
+  height: 3em;
+  border: 2.2px solid #dbdee0;
+  border-radius: 180px;
+}
+
+.profile-pic:hover {
+  border-color: black;
+}
+
+.navi ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.navi ul a {
+  padding: .5em 1.8em;
+}
+
+.navi ul a:hover {
+  background: none;
 }
 /*# sourceMappingURL=products_admin.css.map */

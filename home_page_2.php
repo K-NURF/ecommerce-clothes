@@ -1,0 +1,288 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionee</title>
+    <link rel="stylesheet" href="CSS/home_page.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#"><img class="logo" src="resources/fashionee_logo-removebg-preview.png" alt="logo"></a>
+            <div class="search-bar">
+                <a href = "#"><input type = "search" class = "search" placeholder = "search eg., polo shirt"></a>
+                <svg class = "mobile-search-close" xmlns="http://www.w3.org/2000/svg" width="88.037" height="58.872" viewBox="0 0 88.037 58.872">
+                    <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M95.561,13.41l-8.8-5.887L51.542,31.073,16.327,7.523l-8.8,5.887L42.739,36.96,7.523,60.509l8.8,5.887L51.542,42.846,86.758,66.4l8.8-5.887L60.345,36.96Z" transform="translate(-7.523 -7.523)"/>
+                  </svg>
+            </div>
+            <nav>
+                <svg class = "close" xmlns="http://www.w3.org/2000/svg" width="88.037" height="58.872" viewBox="0 0 88.037 58.872">
+                    <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M95.561,13.41l-8.8-5.887L51.542,31.073,16.327,7.523l-8.8,5.887L42.739,36.96,7.523,60.509l8.8,5.887L51.542,42.846,86.758,66.4l8.8-5.887L60.345,36.96Z" transform="translate(-7.523 -7.523)"/>
+                  </svg>
+
+                <ul>
+                    <li><a href="cart.php" target = "_blank" title = "Shopping Cart"><img src = "resources/shopping-cart-empty-side-view.png" class = "icons"></a></li>
+                    <li><a href="profile.php" target = "_blank" title = "View Profile"><img src = "profile_pics/<?=$_SESSION['picture']?>" class = "profile-pic"></a></li>
+                    <li><a href="logout.php" target = "_blank" title = "logout"><img src = "resources/logout.png" class = "icons"></a></li>
+                </ul>
+                  
+            </nav>
+            <svg class="mobile-icon glass" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 61.513 55.517">
+                <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M65.291,55.992,48.183,40.411a20.773,20.773,0,0,0,5.366-13.8c0-12.213-10.973-22.114-24.525-22.114S4.5,14.408,4.5,26.622,15.473,48.736,29.025,48.736a26.12,26.12,0,0,0,15.458-4.943l17,15.48a2.838,2.838,0,0,0,3.716.087A2.229,2.229,0,0,0,65.291,55.992ZM29.025,43.981a20.232,20.232,0,0,1-13.616-5.088,16.172,16.172,0,0,1,0-24.543A20.232,20.232,0,0,1,29.025,9.263,20.232,20.232,0,0,1,42.641,14.35a16.172,16.172,0,0,1,0,24.543A20.232,20.232,0,0,1,29.025,43.981Z" transform="translate(-4.5 -4.493)"/>
+              </svg>
+              
+
+            <svg class = "mobile-icon menu" xmlns="http://www.w3.org/2000/svg"viewBox="0 0 75.772 52.266">
+                <g id="Group_3" data-name="Group 3" transform="translate(-90.5 -92.367)">
+                  <path id="Path_1" data-name="Path 1" d="M4.5,18H77.272" transform="translate(87.5 100.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                  <path id="Path_2" data-name="Path 2" d="M4.5,9H77.272" transform="translate(87.5 84.867)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                  <path id="Path_3" data-name="Path 3" d="M4.5,27H77.272" transform="translate(87.5 116.133)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                </g>
+              </svg>
+              
+        </header>
+
+        <section class="selections">
+            <hr>
+            <ul>
+                <li class="women"><p><a href="women_home.php">Women</a></p>
+                <div class="women-selections sec-selections">
+                    <p>Clothing</p>
+                    <p>Shoes & Boots</p>
+                    <p>Accessories & Bags</p>
+                    <p>Maternity</p>
+                    <p>Petite</p>
+                    <p>Tall</p>
+                    <p>Brands</p>
+                </div>
+                </li>
+                <li class = "men"><p><a href="men_home.php">Men</a></p>
+                <div class="men-selections sec-selections">
+                    <p>Clothing</p>
+                    <p>Brands</p>
+                    <p>Shoes & Boots</p>
+                    <p>Accessories</p>
+                </div>
+                </li>
+                <li class="girls"> <p><a href="girls_home.php">Girls</a></p>
+                <div class="girls-selections sec-selections">
+                    <p>Clothing</p>
+                    <p>Shoes & Boots</p>
+                    <p>Accessories</p>
+                    <p>Brands</p>
+                </div>
+                </li>
+                <li class = "boys"><p><a href="boys_home.php">Boys</a></p>
+                <div class="boys-selections sec-selections">
+                    <p>Clothing</p>
+                </div>
+                </li>
+            </ul>
+            <hr>
+        </section>
+
+        <section class ="hero">
+            <button type="button" class="shop-now">SHOP NOW</button>
+            <div class="trending-hero">
+                <p class="title">No.1 <em>Trending</em></p>
+                <img class="slides" src="resources/mahdi-bafande-XCU9ZV_ys5w-unsplash.jpg" alt="Trending Fashion">
+                <img class="slides" src="resources/alexi-romano-CCx6Fz_CmOI-unsplash.jpg" alt="Trending Fashion">
+                <img class="slides" src="resources/dom-hill-nimElTcTNyY-unsplash.jpg" alt="Trending Fashion">
+                <p class=" description">Awesome Designer combos, <em>True Fashionee!</em></p>
+                <button class = "buy-now">BUY NOW</button>
+            </div>
+        </section>
+
+        <section class ="top-clothes">
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+            <div class="gallery-item">
+                <img src="resources/840269010.jpg" alt="product">
+                <div>
+                    <p class = "item-name">White t-shirt</p>
+                    <p class = "item-price">Ksh 899</p>
+                </div>
+                <button class = "add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="official-partners">
+            <p><em><u>Official Partners</u></em></p>
+            <div>
+                <img src="resources/LV (1).png" alt="Louis Vitton">
+                <img src="resources/ARMANI.png" alt="Armani">
+                <img src="resources/DC.png" alt="DC">
+                <img src="resources/FILA.png" alt="Fila">
+                <img src="resources/GUCCI.png" alt="GUCCI">
+                <img src="resources/LACOSTE.png" alt="LACOSTE">            
+            </div>
+        </section>
+
+        <footer>
+            
+            <div class="important-links">
+                <p><em><u>Important links</u></em></p>
+                <ul>
+                <li><a href="strathmore.edu">Strathmore University Merch</a></li>
+                <li><a href="strathmore.edu">Strathmore University</a></li>
+                <li><a href="strathmore.edu">Strathmore University</a></li>
+                <li><a href="strathmore.edu">Strathmore University</a></li>
+                <li><a href="strathmore.edu">Strathmore University</a></li></ul>
+
+            </div>
+            <hr>
+            <div class="offers">
+                <p><em><u>Special Offers</u></em></p>
+                <ul>
+                    <li><a href="#"><p>75% Wednesdays</p></a></li>
+                    <li><a href="#"><p>T-shirt Tuesdays(TT)</p> </a></li>
+                </ul>
+                
+                
+            </div>
+            <hr>
+            <div class="social">
+                <p><em><u>Social Platforms</u></em></p>
+                <div class="social-icons">
+                    <a href="http://whatsapp.com/" target = "_blank" title = "WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="61.605" height="53.863" viewBox="0 0 61.605 53.863">
+                    <path id="Icon_awesome-whatsapp" data-name="Icon awesome-whatsapp" d="M52.378,10.077A32.635,32.635,0,0,0,30.789,2.25C13.957,2.25.261,14.225.261,28.941a24.185,24.185,0,0,0,4.07,13.346L0,56.113,16.185,52.4a33.949,33.949,0,0,0,14.59,3.246h.014c16.818,0,30.816-11.975,30.816-26.691,0-7.13-3.465-13.826-9.227-18.876ZM30.789,51.147a28.152,28.152,0,0,1-12.926-3.09l-.921-.481-9.6,2.2L9.9,41.589,9.3,40.748A20.113,20.113,0,0,1,5.418,28.941C5.418,16.714,16.8,6.759,30.8,6.759a27.086,27.086,0,0,1,17.932,6.5c4.785,4.2,7.728,9.763,7.714,15.69C56.449,41.192,44.774,51.147,30.789,51.147ZM44.705,34.532c-.756-.337-4.51-1.948-5.212-2.164s-1.21-.337-1.719.337-1.966,2.164-2.42,2.621-.894.5-1.65.168c-4.483-1.96-7.426-3.5-10.382-7.935-.784-1.178.784-1.094,2.241-3.643a1.1,1.1,0,0,0-.069-1.166c-.193-.337-1.719-3.619-2.351-4.953-.619-1.3-1.251-1.118-1.719-1.142-.44-.024-.949-.024-1.458-.024a3.025,3.025,0,0,0-2.035.83,7.141,7.141,0,0,0-2.668,5.567c0,3.282,2.736,6.456,3.108,6.9S23.748,37.1,31.408,40c4.84,1.827,6.738,1.984,9.158,1.671,1.471-.192,4.51-1.611,5.143-3.174a4.927,4.927,0,0,0,.44-3.174C45.97,35.025,45.461,34.856,44.705,34.532Z" transform="translate(0 -2.25)"/>
+                  </svg></a>
+                    <a href="http://instagram.com/" target = "_blank" title = "Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="58.353" height="50.247" viewBox="0 0 58.353 50.247">
+                    <path id="Icon_awesome-instagram" data-name="Icon awesome-instagram" d="M29.178,14.479c-8.279,0-14.958,5.752-14.958,12.883S20.9,40.244,29.178,40.244s14.958-5.752,14.958-12.883S37.457,14.479,29.178,14.479Zm0,21.258c-5.35,0-9.724-3.756-9.724-8.376s4.361-8.376,9.724-8.376S38.9,22.742,38.9,27.361s-4.374,8.376-9.724,8.376ZM48.236,13.952a3.267,3.267,0,0,1-3.489,3,3.266,3.266,0,0,1-3.489-3,3.274,3.274,0,0,1,3.489-3A3.274,3.274,0,0,1,48.236,13.952ZM58.143,17c-.221-4.025-1.289-7.591-4.713-10.528S45.88,2.616,41.207,2.414c-4.817-.235-19.254-.235-24.07,0-4.66.191-8.8,1.11-12.224,4.048S.434,12.965.2,16.99c-.273,4.149-.273,16.583,0,20.731.221,4.025,1.289,7.591,4.713,10.528s7.55,3.857,12.224,4.059c4.817.235,19.254.235,24.07,0,4.673-.191,8.813-1.11,12.224-4.059s4.478-6.5,4.713-10.528c.273-4.149.273-16.572,0-20.72ZM51.92,42.173a9.273,9.273,0,0,1-5.546,4.776c-3.84,1.312-12.953,1.009-17.2,1.009s-13.37.292-17.2-1.009a9.275,9.275,0,0,1-5.546-4.776C4.912,38.865,5.264,31.017,5.264,27.361S4.925,15.846,6.435,12.55a9.273,9.273,0,0,1,5.546-4.776c3.84-1.312,12.953-1.009,17.2-1.009s13.37-.292,17.2,1.009A9.275,9.275,0,0,1,51.92,12.55c1.523,3.308,1.172,11.156,1.172,14.811S53.444,38.876,51.92,42.173Z" transform="translate(0.005 -2.238)"/>
+                  </svg></a>
+                    <a href="http://twitter.com/" target = "_blank" title = "Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="74.052" height="50.247" viewBox="0 0 74.052 50.247">
+                    <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M66.44,15.9c.047.55.047,1.1.047,1.649,0,16.762-15.271,36.076-43.181,36.076A49.217,49.217,0,0,1,0,47.936c1.222.118,2.4.157,3.665.157a34.38,34.38,0,0,0,18.842-5.417c-6.672-.118-12.264-3.769-14.19-8.793a22.829,22.829,0,0,0,2.866.2,19.047,19.047,0,0,0,3.994-.432C8.223,32.469,3.007,27.366,3.007,21.2v-.157a17.619,17.619,0,0,0,6.86,1.609C5.779,20.378,3.1,16.492,3.1,12.1A11.052,11.052,0,0,1,5.168,5.7c7.471,7.694,18.7,12.719,31.294,13.268a12.061,12.061,0,0,1-.376-2.9c0-6.988,6.766-12.68,15.177-12.68a16.663,16.663,0,0,1,11.089,4,33.667,33.667,0,0,0,9.632-3.062,13.35,13.35,0,0,1-6.672,6.987,35.254,35.254,0,0,0,8.74-1.963A30.288,30.288,0,0,1,66.44,15.9Z" transform="translate(0 -3.381)"/>
+                  </svg></a>
+                    <a href="http://twitch.com/" target = "_blank" title = "Twithc"><svg xmlns="http://www.w3.org/2000/svg" width="54.812" height="53.11" viewBox="0 0 54.812 53.11">
+                    <path id="Icon_awesome-twitch" data-name="Icon awesome-twitch" d="M4.558,2.25.7,11.366v37.26h13.7V55.36h7.709l7.274-6.734H40.531l14.984-13.87V2.25ZM50.379,32.373,41.812,40.3h-13.7l-7.274,6.734V40.3H9.271V7H50.379v25.37ZM41.812,16.12V29.979H36.676V16.12Zm-13.7,0V29.979H22.973V16.12Z" transform="translate(-0.703 -2.25)"/>
+                  </svg></a>
+                    <a href="http://tiktok.com/" target = "_blank" title = "TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="39.563" height="43.903" viewBox="0 0 39.563 43.903">
+                    <path id="Icon_simple-tiktok" data-name="Icon simple-tiktok" d="M23.147.037C25.633,0,28.1.018,30.566,0a11.192,11.192,0,0,0,3.32,7.628A13.638,13.638,0,0,0,41.931,10.9v7.372A20.939,20.939,0,0,1,33.962,16.5a23.68,23.68,0,0,1-3.074-1.7c-.019,5.342.019,10.683-.038,16.006a13.647,13.647,0,0,1-2.562,7.207,14.279,14.279,0,0,1-11.214,5.872A14.241,14.241,0,0,1,9.334,42,13.762,13.762,0,0,1,2.408,31.555c-.038-.915-.057-1.829-.019-2.726a13.578,13.578,0,0,1,4.9-9.073A14.494,14.494,0,0,1,18.954,16.61c.038,2.707-.076,5.415-.076,8.122a6.854,6.854,0,0,0-5.73.677,6.392,6.392,0,0,0-2.58,3.2,7.008,7.008,0,0,0-.266,2.945,6.4,6.4,0,0,0,6.641,5.25A6.422,6.422,0,0,0,22.2,33.86a4.133,4.133,0,0,0,.778-1.939c.19-3.274.114-6.531.133-9.8.019-7.372-.019-14.726.038-22.079Z" transform="translate(-2.369)"/>
+                  </svg></a>
+                </div>                                               
+            </div>
+            
+            
+        </footer>
+
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("slides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000);
+        }
+
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+        const search = document.querySelector('.glass')
+        const bar = document.querySelector('.search-bar')
+        const close_search = document.querySelector('.mobile-search-close')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        })
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
+        })
+        search.addEventListener('click', () => {
+            bar.classList.add('open-search')
+        })
+        close_search.addEventListener('click', () => {
+            bar.classList.remove('open-search')
+        })
+
+        </script>
+</body>
+</html>

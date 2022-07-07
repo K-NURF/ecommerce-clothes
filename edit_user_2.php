@@ -23,14 +23,13 @@
             $last_name = $_POST['last_name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $c_password = $_POST['c_password'];
-            $security_code = $_POST['security_code'];
+            $gender = $_POST['gender'];
             // $picture = $_FILES['picture']['name'];
             $role = $_POST['role'];
             $is_deleted = $_POST['is_deleted'];
             // $destination = "users_pictures/" . basename($_FILES['picture']['name']);
 
-            $sql = "UPDATE `users` SET `first_name` = '$first_name', `last_name` = '$last_name', `email` = '$email', `password` = '$password', `c_password` = '$c_password', `security_code` = '$security_code', `role` = '$role', `is_deleted` = '$is_deleted' WHERE `id` = '$id'";
+            $sql = "UPDATE `users` SET `first_name` = '$first_name', `last_name` = '$last_name', `email` = '$email', `password` = '$password', `gender` = '$gender', `role` = '$role', `is_deleted` = '$is_deleted' WHERE `id` = '$id'";
 
             if (mysqli_query($conn, $sql)) {
                 // move_uploaded_file($_FILES['picture']['tmp_name'], $destination);

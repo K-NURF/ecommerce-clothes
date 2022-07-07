@@ -6,15 +6,19 @@ $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
 $password=$_POST['password'];
-$confirm_password=$_POST['c_password'];
-$account_number=$_POST['acc_number'];
-$security_code=$_POST['security_code'];
+$gender=$_POST['gender'];
 $role = "customer";
+$profile_pic = $_FILES['profile_pic']['name'];
+$destination = "profile_pics/" . basename($_FILES['profile_pic']['name']);
 
-$sql = "INSERT INTO `users` (`first_name`, `last_name`, `email`, `password`, `c_password`, `acc_number`, `security_code`, `role` )VALUES ('$firstname', '$lastname', '$email', '$password', '$confirm_password', '$account_number', '$security_code', '$role')";
+
+$sql = "INSERT INTO `users` (`first_name`, `last_name`, `email`, `password`, `gender`, `picture`, `role` )VALUES ('$firstname', '$lastname', '$email', '$password', '$gender','$profile_pic', '$role')";
 
 if(mysqli_query($conn, $sql)){
-    echo "New user added successfully";
+    move_uploaded_file($_FILES['profile_pic']['tmp_name'], $destination);
+    echo "<script>alert('Account successfully created. Now login to your account.');</script>";
+    header("Location:home_page.html");
+
 }else{
     echo "User registration failed".mysqli_error($conn);
 }

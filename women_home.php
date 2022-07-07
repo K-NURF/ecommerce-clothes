@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women</title>
-    <link rel="stylesheet" href="CSS/home_page.css">
+    <link rel="stylesheet" href="CSS/home_page.css">7
 </head>
 
 <body>
@@ -72,7 +75,7 @@
                     echo "<p class = 'item-name'>" . $row['name'] . "</p>";
                     echo "<p class = 'item-desc'>" . $row['description'] . "</p>";
                     echo "<p class = 'item-price'>Ksh " . $row['price'] . "</p>";
-                    echo "<button style = 'width: 100%; height: 3.5em; border-radius: 5px; font-size: .9em;' class = 'add-to-cart'>ADD TO CART</button>";
+                    echo "<button onclick = 'myFunction()' style = 'width: 100%; height: 3.5em; border-radius: 5px; font-size: .9em;' class = 'add-to-cart'><a href = 'add_cart.php?id=".$row['id']."'>ADD TO CART</a></button>";
                     echo "</div>";
                     echo "</div>";
                 }   
@@ -80,7 +83,21 @@
 
                 ?>
         </section>
+        <div id="popup">Product added to cart</div>
     </div>
 </body>
 
 </html>
+
+<script>
+    function myFunction() {
+  // Get the snackbar DIV
+  var x = document.getElementById("popup");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
+}
+</script>

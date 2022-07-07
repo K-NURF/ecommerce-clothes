@@ -95,7 +95,7 @@ if ($department != "" && $new_department != "") {
         <div class="preview">
             <?php
             require("connect.php");
-            $display_sql = "SELECT * FROM `products` ORDER BY `products_id` DESC LIMIT 1;";
+            $display_sql = "SELECT * FROM `products` ORDER BY `id` DESC LIMIT 1;";
             $result = mysqli_query($conn, $display_sql);
             while ($row = mysqli_fetch_array($result)) {
                 echo "<h2 style ='color: rgb(57,57,59);'>" . $row['name'] . "</h2>";

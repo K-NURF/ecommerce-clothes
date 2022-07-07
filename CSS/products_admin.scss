@@ -19,6 +19,14 @@ button{
         background-color:rgb(192, 192, 192);
         color: black;
     }
+    a{
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            color: black;
+        }
+    }
 }
 
 h1{
@@ -157,5 +165,45 @@ tr:hover {
     font-size: 2em;
     font-weight: bold;
     color: rgb(57,57, 57);
+}
+
+.icons{
+    width: 3em;
+    height: 3em;
+    border: 2.2px solid #0ABAB5;
+
+
+    &:hover{
+        border-radius: 180px;
+        border-color: black;
+    }
+}
+li{
+    list-style: none;
+}
+.profile-pic{
+    width: 3em;
+    height: 3em;
+    border: 2.2px solid rgb(219, 222, 224);
+    border-radius: 180px;
+
+    &:hover{
+        border-color: black;
+    }
+}
+
+.navi{
+    ul{
+        display: flex;
+        margin: 0;
+
+        a{
+            padding: .5em 1.8em;
+            &:hover{
+                background: none;
+
+            }
+        }
+    }
 }
 

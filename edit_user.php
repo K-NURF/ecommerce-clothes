@@ -39,14 +39,8 @@
             echo "<label>Password</label><br>";
             echo "<input type='text' name='password' value='".$row['password']."'><br><br>";
 
-            echo "<label>Confirm Password</label><br>";
-            echo "<input type='text' name='c_password' value='".$row['c_password']."'><br><br>";
-
-            echo "<label>Card account number</label><br>";
-            echo "<input type='text' name='acc_number' value='".$row['acc_number']."'><br><br>";
-
-            echo "<label>Card Security Code</label><br>";
-            echo "<input type='text' name='security_code' value='".$row['security_code']."'><br><br>";
+            echo "<label>Gender</label><br>";
+            echo "<input type='text' name='gender' value='".$row['gender']."'><br><br>";
 
             echo "<label>Picture</label><br>";
             echo "<input type='file' name='picture'><br><br>";

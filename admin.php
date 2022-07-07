@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +20,8 @@
     <div class="wrapper">
         <header>
         <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+        <a href="logout.php" target = "_blank" title = "logout"><img src = "resources/logout.png" class = "icons"></a>
+
         <h1>ADMINISTRATOR</h1>
         </header>
 

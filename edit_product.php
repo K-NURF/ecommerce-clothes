@@ -22,11 +22,11 @@
 
         $selected_id = $_POST['id'];
         
-        $sql = "SELECT * FROM `products` WHERE `products_id` = '".$selected_id."'";
+        $sql = "SELECT * FROM `products` WHERE `id` = '".$selected_id."'";
 
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_array($result)) {
-            echo "<input type='hidden' name='id' value='".$row['products_id']."'>";
+            echo "<input type='hidden' name='id' value='".$row['id']."'>";
             echo "<label>Name</label><br>";
             echo "<input type='text' name='name' value='".$row['name']."'><br><br>";
 

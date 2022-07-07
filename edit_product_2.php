@@ -30,7 +30,7 @@
             $is_deleted = $_POST['is_deleted'];
             // $destination = "users_pictures/" . basename($_FILES['picture']['name']);
 
-            $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price', `description` = '$description', `category` = '$category', `department` = '$department', `is_deleted` = '$is_deleted' WHERE `products_id` = '$id'";
+            $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price', `description` = '$description', `category` = '$category', `department` = '$department', `is_deleted` = '$is_deleted' WHERE `id` = '$id'";
 
             if (mysqli_query($conn, $sql)) {
                 // move_uploaded_file($_FILES['picture']['tmp_name'], $destination);

@@ -18,10 +18,9 @@
         </header>
 
         <section>
-            <form method="" action="">
-                <input type="email" id="email" name="email" placeholder="email" class="input-fields"><br>
-                <input type="password" id="password" name="password" placeholder="password" class="input-fields">
-            </form>
+            <form method="POST" action="authenticate.php">
+                <input type="email" id="email" name="email" placeholder="email" class="input-fields" required><br>
+                <input type="password" id="password" name="password" placeholder="password" class="input-fields" required>
             <div class="rem-for">
                 <div class="remember-me"> <input type="checkbox" name="remember me" id="remember_me">
                     <label for="remember me">Remember me</label>
@@ -30,6 +29,7 @@
 
             </div>
             <button type="submit">LOGIN</button>
+            </form>
 
             <p>Don't have an account? <a href="register.php">create an account</a></p>
             </p>
