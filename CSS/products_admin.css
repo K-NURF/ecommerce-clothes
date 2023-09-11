@@ -1,30 +1,27 @@
 body {
   margin: 1.5em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
-  background-color: #dbdee0;
+  background-color: rgb(219, 222, 224);
 }
 
 button {
-  background-color: #393939;
+  background-color: rgb(57, 57, 57);
   border-radius: 15px;
   margin-top: 5px;
-  color: silver;
+  color: rgb(192, 192, 192);
   border: none;
   width: 50%;
   height: 2.25em;
 }
-
 button:hover {
-  background-color: silver;
+  background-color: rgb(192, 192, 192);
   color: black;
 }
-
 button a {
   text-decoration: none;
   color: white;
 }
-
 button a:hover {
   color: black;
 }
@@ -36,7 +33,7 @@ h1 {
 .logo {
   width: 25em;
   height: 3.5em;
-  margin: .5em;
+  margin: 0.5em;
 }
 
 .choosing {
@@ -52,31 +49,22 @@ h1 {
   width: 60%;
   margin: auto;
 }
-
 .wrapper input {
   text-align: center;
   width: 25em;
   height: 25px;
   border-radius: 15px;
-  border: 3px solid #abcfeb;
+  border: 3px solid rgb(171, 207, 235);
 }
 
 .category {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .department {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .or {
@@ -93,14 +81,15 @@ h1 {
 }
 
 table {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
-th, td {
-  border-bottom: 1.5px solid #393939;
-  padding: 0 .7em;
+th,
+td {
+  border-bottom: 1.5px solid rgb(57, 57, 57);
+  padding: 0 0.7em;
   text-align: left;
 }
 
@@ -114,15 +103,12 @@ tr:hover {
   margin: 0 8px 0 0;
   stroke: white;
 }
-
 .top-edit-button svg path {
   fill: white;
 }
-
 .top-edit-button:hover svg {
   stroke: black;
 }
-
 .top-edit-button:hover svg path {
   fill: black;
 }
@@ -132,7 +118,7 @@ tr:hover {
 }
 
 .delete-button:hover {
-  background-color: #f84444;
+  background-color: rgb(248, 68, 68);
   border-radius: 5px;
 }
 
@@ -140,11 +126,11 @@ tr:hover {
   width: 5em;
   height: 25px;
   border-radius: 15px;
-  border: 3px solid #abcfeb;
+  border: 3px solid rgb(171, 207, 235);
 }
 
 .fixed-header {
-  padding-top: .5em;
+  padding-top: 0.5em;
   position: fixed;
   top: 0;
   left: 0;
@@ -152,11 +138,10 @@ tr:hover {
   width: 100%;
   background-color: #0ABAB5;
 }
-
 .fixed-header div {
   position: fixed;
   right: 5em;
-  top: .5em;
+  top: 0.5em;
 }
 
 .users-table {
@@ -167,7 +152,7 @@ tr:hover {
   margin-top: 3.2em;
   font-size: 2em;
   font-weight: bold;
-  color: #393939;
+  color: rgb(57, 57, 57);
 }
 
 .icons {
@@ -175,7 +160,6 @@ tr:hover {
   height: 3em;
   border: 2.2px solid #0ABAB5;
 }
-
 .icons:hover {
   border-radius: 180px;
   border-color: black;
@@ -188,26 +172,49 @@ li {
 .profile-pic {
   width: 3em;
   height: 3em;
-  border: 2.2px solid #dbdee0;
+  border: 2.2px solid rgb(219, 222, 224);
   border-radius: 180px;
 }
-
 .profile-pic:hover {
   border-color: black;
 }
 
 .navi ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
-
 .navi ul a {
-  padding: .5em 1.8em;
+  padding: 0.5em 1.8em;
 }
-
 .navi ul a:hover {
   background: none;
 }
-/*# sourceMappingURL=products_admin.css.map */
+
+.grand-total {
+  position: fixed;
+  right: 5em;
+  bottom: 5em;
+}
+.grand-total input {
+  text-align: center;
+}
+
+.quantity-adjust {
+  display: flex;
+  justify-content: space-between;
+}
+.quantity-adjust input {
+  width: 2em;
+}
+.quantity-adjust .pluus {
+  background-color: #0ABAB5;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  width: 50%;
+  height: 2.25em;
+}
+.quantity-adjust .pluus:hover {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}/*# sourceMappingURL=products_admin.css.map */

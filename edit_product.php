@@ -11,11 +11,11 @@
 <body>
     <div class="wrapper">
         <header class="fixed-header">
-         <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+         <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
         </header>   
         <p class = "edit-intro">Edit required fields and click save:</p>
 
-        <form action="edit_product_2.php" method = "POST">
+        <form action="edit_product_2.php" method = "POST" enctype="multipart/form-data">
 
         <?php
         require("connect.php");
@@ -27,6 +27,10 @@
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<input type='hidden' name='id' value='".$row['id']."'>";
+            
+            echo "<label>Image</label><br>";
+            echo "<input type='file' name='image' value='".$row['image']."'><br><br>";
+
             echo "<label>Name</label><br>";
             echo "<input type='text' name='name' value='".$row['name']."'><br><br>";
 
@@ -41,9 +45,6 @@
 
             echo "<label>Department</label><br>";
             echo "<input type='text' name='department' value='".$row['department']."'><br><br>";
-
-            // echo "<label>Image</label><br>";
-            // echo "<input type='text' name='image' value='".$row['image']."'><br><br>";
 
             echo "<label>Status</label><br>";
             echo "<input type='text' name='is_deleted' value='".$row['is_deleted']."'><br><br>";

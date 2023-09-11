@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <header class="fixed-header">
-         <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+         <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
         </header>   
         <p class = "edit-intro">Edit required fields and click save:</p>
 

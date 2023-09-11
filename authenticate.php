@@ -22,7 +22,7 @@ if ($stmt = $conn->prepare('SELECT `id`,`first_name`, `password`, `picture`,`rol
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['email'];
-                $_SESSION['id'] = $id;
+                $_SESSION['admin_id'] = $id;
                 $_SESSION['first_name'] = $first_name;
                 $_SESSION['picture'] = $picture;
                 header('Location: admin.php'); 

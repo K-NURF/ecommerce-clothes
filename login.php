@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo"
+            <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo"
                     class="logo"></a>
             <h1>LOGIN</h1>
         </header>

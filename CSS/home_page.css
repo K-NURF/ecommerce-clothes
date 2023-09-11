@@ -1,7 +1,7 @@
 body {
   margin: 1.5em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #dbdee0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(219, 222, 224);
 }
 
 a {
@@ -11,27 +11,22 @@ a {
 .logo {
   width: 25em;
   height: 3.5em;
-  padding: .5em 0 0 0;
+  padding: 0.5em 0 0 0;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 header svg {
   width: 2em;
-  margin-top: -.6em;
+  margin-top: -0.6em;
   cursor: pointer;
 }
 
 .search-bar {
   display: none;
-  margin: .5em 0 0 0;
+  margin: 0.5em 0 0 0;
 }
 
 nav {
@@ -39,32 +34,24 @@ nav {
   right: 0;
   top: 0;
   height: 100vh;
-  background: #393939;
+  background: rgb(57, 57, 57);
   width: 20%;
   z-index: 20;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
 }
-
 nav ul {
   list-style: none;
   padding: 0;
   margin-top: 8em;
 }
-
 nav ul a {
-  padding: .75em 2em;
+  padding: 0.75em 2em;
   display: block;
 }
-
 nav ul a:hover {
-  background: silver;
+  background: rgb(192, 192, 192);
 }
-
 nav .close {
   float: right;
   margin: 1em;
@@ -82,67 +69,53 @@ nav .close {
 }
 
 .mobile-icon {
-  margin-top: .75em;
+  margin-top: 0.75em;
   width: 2em;
   height: 2em;
 }
 
 .selections {
   display: block;
-  background-color: silver;
+  background-color: rgb(192, 192, 192);
 }
-
 .selections hr {
   margin: 0;
 }
-
 .selections ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
-
 .selections ul li {
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   list-style: none;
   position: relative;
 }
-
 .selections ul p {
-  padding: .5em 0;
+  padding: 0.5em 0;
   margin: 0;
 }
-
 .selections ul p a {
   text-decoration: none;
   color: black;
 }
-
 .selections ul p:hover {
   text-decoration: underline;
   background-color: black;
 }
-
 .selections ul p:hover a {
-  color: silver;
+  color: rgb(192, 192, 192);
 }
-
 .selections ul p::after {
   content: "";
   height: 3px;
   width: 0;
-  background: #393939;
+  background: rgb(57, 57, 57);
   position: absolute;
   left: 0;
-  bottom: -.5px;
-  -webkit-transition: 1s;
+  bottom: -0.5px;
   transition: 1s;
 }
-
 .selections ul p:hover::after {
   width: 100%;
 }
@@ -167,33 +140,24 @@ nav .close {
   display: none;
   position: absolute;
   background-color: black;
-  color: silver;
+  color: rgb(192, 192, 192);
   width: 100%;
   z-index: 99;
 }
 
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 8.9em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .hero div {
   text-align: center;
 }
-
 .hero div .title {
   font-weight: bold;
   font-size: 1.5em;
 }
-
 .hero div img {
   width: 100%;
   height: 20em;
@@ -203,11 +167,9 @@ nav .close {
   -webkit-animation: introLoad 2s forwards;
           animation: introLoad 2s forwards;
 }
-
 .hero div .description {
   font-size: 1.25em;
 }
-
 .hero div .buy-now {
   width: 50%;
   height: 2em;
@@ -220,42 +182,37 @@ nav .close {
 }
 
 button {
-  background-color: #393939;
+  background-color: rgb(57, 57, 57);
   border-radius: 15px;
-  color: silver;
+  color: rgb(192, 192, 192);
   border: none;
 }
-
 button:hover {
-  background-color: silver;
+  background-color: rgb(192, 192, 192);
   color: black;
 }
 
 .top-clothes {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   gap: 4em;
   margin-bottom: 3em;
   margin-top: 2em;
 }
 
 .gallery-item {
-  padding: .7em;
-  border: 1px solid #b2b0b0;
+  padding: 0.7em;
+  border: 1px solid rgb(178, 176, 176);
 }
 
 .official-partners p {
   font-size: 1.5em;
   text-align: center;
 }
-
 .official-partners div {
   width: 100%;
   margin-bottom: 3em;
 }
-
 .official-partners div img {
   width: 10%;
   height: 10%;
@@ -263,13 +220,12 @@ button:hover {
 }
 
 .open-nav {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .open-search {
   height: 100vh;
-  background: #393939;
+  background: rgb(57, 57, 57);
   width: 20%;
   right: 5em;
   top: 1em;
@@ -277,21 +233,16 @@ button:hover {
   height: 20px;
   padding: 15px;
   z-index: 20;
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   display: block;
   position: fixed;
 }
-
 .open-search .mobile-search-close {
   display: block;
   position: fixed;
   right: 1em;
-  top: .5em;
+  top: 0.5em;
 }
-
 .open-search a .search {
   border-radius: 180px;
 }
@@ -301,83 +252,61 @@ button:hover {
 }
 
 footer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
-  gap: .1em;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.1em;
 }
-
 footer div {
   text-align: center;
 }
-
 footer div ul {
   padding: 0 1em;
 }
-
 footer div ul li {
   list-style: none;
 }
-
 footer hr {
   display: none;
 }
 
 .social-icons {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
   gap: 1.5em;
 }
 
 .fixed-header {
-  padding-top: .5em;
+  padding-top: 0.5em;
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #0ABAB5;
+  z-index: 999;
 }
 
 #popup {
-  visibility: hidden;
-  /* Hidden by default. Visible on click */
-  min-width: 250px;
-  /* Set a default minimum width */
-  margin-left: -125px;
-  /* Divide value of min-width by 2 */
-  background-color: #333;
-  /* Black background color */
-  color: #fff;
-  /* White text color */
-  text-align: center;
-  /* Centered text */
-  border-radius: 2px;
-  /* Rounded borders */
-  padding: 16px;
-  /* Padding */
-  position: fixed;
-  /* Sit on top of the screen */
-  z-index: 1;
-  /* Add a z-index if needed */
-  left: 50%;
-  /* Center the popup */
-  bottom: 30px;
-  /* 30px from the bottom */
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #0ABAB5; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 20; /* Add a z-index if needed */
+  left: 50%; /* Center the popup */
+  bottom: 30px; /* 30px from the bottom */
 }
 
 /* Show the popup when clicking on a button (class added with JavaScript) */
 #popup.show {
-  visibility: visible;
-  /* Show the snackbar */
+  visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-    However, delay the fade out process for 2.5 seconds */
+  However, delay the fade out process for 2.5 seconds */
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
@@ -393,7 +322,6 @@ footer hr {
     opacity: 1;
   }
 }
-
 @keyframes fadein {
   from {
     bottom: 0;
@@ -404,7 +332,6 @@ footer hr {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeout {
   from {
     bottom: 30px;
@@ -415,7 +342,6 @@ footer hr {
     opacity: 0;
   }
 }
-
 @keyframes fadeout {
   from {
     bottom: 30px;
@@ -426,7 +352,6 @@ footer hr {
     opacity: 0;
   }
 }
-
 @media only screen and (min-width: 680px) {
   body {
     margin: 1.5em 4em;
@@ -435,11 +360,9 @@ footer hr {
     height: 30em;
   }
   .top-clothes {
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }
-
 @media only screen and (min-width: 920px) {
   .hero div {
     margin: 0 7em;
@@ -468,8 +391,7 @@ footer hr {
     padding: 15px;
   }
   nav {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     position: unset;
     display: block;
     width: auto;
@@ -480,13 +402,11 @@ footer hr {
     display: none;
   }
   nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0;
   }
   nav ul a {
-    padding: .5em 1.8em;
+    padding: 0.5em 1.8em;
   }
   nav ul a:hover {
     background: none;
@@ -494,7 +414,7 @@ footer hr {
   .icons {
     width: 3em;
     height: 3em;
-    border: 2.2px solid #dbdee0;
+    border: 2.2px solid rgb(219, 222, 224);
   }
   .icons:hover {
     border-radius: 180px;
@@ -503,26 +423,23 @@ footer hr {
   .profile-pic {
     width: 3em;
     height: 3em;
-    border: 2.2px solid #dbdee0;
+    border: 2.2px solid rgb(219, 222, 224);
     border-radius: 180px;
   }
   .profile-pic:hover {
     border-color: black;
   }
   .social-icons {
-    -ms-grid-columns: (auto)[5];
-        grid-template-columns: repeat(5, auto);
-    gap: .5em;
+    grid-template-columns: repeat(5, auto);
+    gap: 0.5em;
   }
   footer hr {
     display: inherit;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .top-clothes {
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
   }
   .hero {
     gap: em;
@@ -531,17 +448,14 @@ footer hr {
     height: 30em;
   }
 }
-
 @media only screen and (min-width: 1350px) {
   .logo {
     margin: 0 2em 0 10em;
   }
   .top-clothes {
-    -ms-grid-columns: (auto)[5];
-        grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, auto);
   }
 }
-
 @-webkit-keyframes introLoad {
   from {
     -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -552,7 +466,6 @@ footer hr {
             clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
   }
 }
-
 @keyframes introLoad {
   from {
     -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -562,5 +475,4 @@ footer hr {
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
             clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 57%, 100% 100%, 51% 100%, 0 100%, 0 59%, 0 35%, 0 0);
   }
-}
-/*# sourceMappingURL=home_page.css.map */
+}/*# sourceMappingURL=home_page.css.map */

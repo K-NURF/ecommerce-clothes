@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 // Redirect to the login page:
-header('Location: home_page.html');
+header('Location: home_page.php');
 ?>

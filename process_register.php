@@ -16,8 +16,7 @@ $sql = "INSERT INTO `users` (`first_name`, `last_name`, `email`, `password`, `ge
 
 if(mysqli_query($conn, $sql)){
     move_uploaded_file($_FILES['profile_pic']['tmp_name'], $destination);
-    echo "<script>alert('Account successfully created. Now login to your account.');</script>";
-    header("Location:home_page.html");
+    header("Location:home_page_2.php");
 
 }else{
     echo "User registration failed".mysqli_error($conn);

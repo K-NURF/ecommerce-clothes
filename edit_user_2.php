@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <header class="fixed-header">
-            <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+            <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
         </header>
         <div class="php-div">
             <?php
@@ -43,7 +43,7 @@
             </div>
          </div>";
             } else {
-                echo "<script>alert('Failed to add product');</script>";
+                echo "<script>alert('Failed to edit User');</script>";
             }
 
 

@@ -1,4 +1,4 @@
-body{
+body {
     margin: 1.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -6,52 +6,54 @@ body{
 
 }
 
-button{
-    background-color: rgb(57,57, 57);
-    border-radius:15px;
+button {
+    background-color: rgb(57, 57, 57);
+    border-radius: 15px;
     margin-top: 5px;
-    color:rgb(192, 192, 192);
+    color: rgb(192, 192, 192);
     border: none;
     width: 50%;
     height: 2.25em;
 
-    &:hover{
-        background-color:rgb(192, 192, 192);
+    &:hover {
+        background-color: rgb(192, 192, 192);
         color: black;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: white;
 
-        &:hover{
+        &:hover {
             color: black;
         }
     }
 }
 
-h1{
-    color: #3AC1F2 ;
-  }
+h1 {
+    color: #3AC1F2;
+}
 
-.logo{
+.logo {
     width: 25em;
     height: 3.5em;
     margin: .5em;
 }
 
-.choosing{
+.choosing {
     margin: 2em;
 }
 
-.preview{
+.preview {
     border: 2px solid black;
     border-radius: 15px;
 }
 
-.wrapper{
+.wrapper {
     width: 60%;
     margin: auto;
-    input{
+
+    input {
         text-align: center;
         width: 25em;
         height: 25px;
@@ -60,38 +62,39 @@ h1{
     }
 }
 
-.category{
+.category {
     display: flex;
     justify-content: space-between;
 }
 
-.department{
+.department {
     display: flex;
     justify-content: space-between;
 }
 
-.or{
+.or {
     padding: 1em;
     font-size: 2em;
     color: red;
 }
 
-.drop-down{
+.drop-down {
 
-    border-radius:15px;
+    border-radius: 15px;
     border: 2px;
     width: 70%;
     height: 2.25em;
 }
 
-table{
-    font-family:'Courier New', Courier, monospace ;
+table {
+    font-family: 'Courier New', Courier, monospace;
     margin: 0 auto;
     border-collapse: collapse;
 }
 
-th, td {
-    border-bottom: 1.5px solid rgb(57,57, 57);
+th,
+td {
+    border-bottom: 1.5px solid rgb(57, 57, 57);
     padding: 0 .7em;
     text-align: left;
 }
@@ -100,37 +103,41 @@ tr:hover {
     background-color: #bfd2da;
 }
 
-.top-edit-button{
-    svg{
-   height: 1.3em;
-    width: 1.3em;
-    margin: 0 8px 0 0;
-    stroke: white;  
-    path{
-        fill: white;
-    } 
+.top-edit-button {
+    svg {
+        height: 1.3em;
+        width: 1.3em;
+        margin: 0 8px 0 0;
+        stroke: white;
+
+        path {
+            fill: white;
+        }
     }
-    &:hover{
-        svg{
+
+    &:hover {
+        svg {
             stroke: black;
-            path{
+
+            path {
                 fill: black;
             }
         }
     }
- 
+
 }
-.delete-button{
+
+.delete-button {
     margin: 5px 0 0 0;
 }
 
-.delete-button:hover{
+.delete-button:hover {
     background-color: rgb(248, 68, 68);
     border-radius: 5px;
 }
 
-.edit-div{
-    input{
+.edit-div {
+    input {
         width: 5em;
         height: 25px;
         border-radius: 15px;
@@ -138,7 +145,7 @@ tr:hover {
     }
 }
 
-.fixed-header{
+.fixed-header {
     padding-top: .5em;
     position: fixed;
     top: 0;
@@ -148,7 +155,8 @@ tr:hover {
     // display: flex;
     // justify-content: center;
     background-color: #0ABAB5;
-    div{
+
+    div {
         position: fixed;
         right: 5em;
         top: .5em;
@@ -156,50 +164,53 @@ tr:hover {
 
 }
 
-.users-table{
+.users-table {
     margin-top: 6em;
 }
 
-.edit-intro{
+.edit-intro {
     margin-top: 3.2em;
     font-size: 2em;
     font-weight: bold;
-    color: rgb(57,57, 57);
+    color: rgb(57, 57, 57);
 }
 
-.icons{
+.icons {
     width: 3em;
     height: 3em;
     border: 2.2px solid #0ABAB5;
 
 
-    &:hover{
+    &:hover {
         border-radius: 180px;
         border-color: black;
     }
 }
-li{
+
+li {
     list-style: none;
 }
-.profile-pic{
+
+.profile-pic {
     width: 3em;
     height: 3em;
     border: 2.2px solid rgb(219, 222, 224);
     border-radius: 180px;
 
-    &:hover{
+    &:hover {
         border-color: black;
     }
 }
 
-.navi{
-    ul{
+.navi {
+    ul {
         display: flex;
         margin: 0;
 
-        a{
+        a {
             padding: .5em 1.8em;
-            &:hover{
+
+            &:hover {
                 background: none;
 
             }
@@ -207,3 +218,36 @@ li{
     }
 }
 
+.grand-total {
+
+    position: fixed;
+    right: 5em;
+    bottom: 5em;
+
+    input {
+        text-align: center;
+
+    }
+}
+
+.quantity-adjust {
+    display: flex;
+    justify-content: space-between;
+    input{
+        width: 2em;
+    }
+
+    .pluus {
+        background-color: #0ABAB5;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        width: 50%;
+        height: 2.25em;
+
+        &:hover {
+            background-color: rgb(192, 192, 192);
+            color: black;
+        }
+    }
+}

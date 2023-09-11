@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <header class="fixed-header">
-            <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+            <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
         </header>
         <div class="php-div">
             <?php
@@ -24,16 +24,14 @@
             $description = $_POST['description'];
             $category = $_POST['category'];
             $department = $_POST['department'];
-            // $image = $_POST['image'];
-            // $picture = $_FILES['picture']['name'];
-            // $role = $_POST['role'];
+            $image = $_FILES['image']['name'];
             $is_deleted = $_POST['is_deleted'];
-            // $destination = "users_pictures/" . basename($_FILES['picture']['name']);
+            $destination = "product_images/" . basename($_FILES['image']['name']);
 
-            $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price', `description` = '$description', `category` = '$category', `department` = '$department', `is_deleted` = '$is_deleted' WHERE `id` = '$id'";
+            $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price', `description` = '$description', `category` = '$category', `department` = '$department', `image` = '$image', `is_deleted` = '$is_deleted' WHERE `id` = '$id'";
 
             if (mysqli_query($conn, $sql)) {
-                // move_uploaded_file($_FILES['picture']['tmp_name'], $destination);
+                move_uploaded_file($_FILES['image']['tmp_name'], $destination);
                 echo "<p class = 'edit-intro' >Changes have been updated successfully</p>";
                 echo "<div class='success-checkmark'>
             <div class='check-icon'>

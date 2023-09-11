@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     session_start();
     require("connect.php");
     if (!isset($_SESSION['loggedin'])) {
@@ -22,8 +22,8 @@
     $stmt->fetch();
     $stmt->close();
 
-    $sql2 = "INSERT INTO `cart_details` (`cart_id`, `product_id`, `product_price`, `order_total`) VALUES ('$cart_id', '$product_id', '$price','$price')";
+    $sql2 = "INSERT IGNORE INTO `cart_details` (`cart_id`, `product_id`, `product_price`, `order_total`) VALUES ('$cart_id', '$product_id', '$price','$price')";
     mysqli_query($conn, $sql2);
 
-    header("Location:women_home.php");
-    
+    header("Location:home_page_2.php");
+    ?> -->

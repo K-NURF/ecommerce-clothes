@@ -65,8 +65,8 @@
              </tr>
          </table>
 
-         <p>Click here to see your <a style = "text-decoration:none; color: #0ABAB5;" href="#">purchase history</a></p>
-         <button type="button"><a href="home_page_2.php">Back</a></button>
+         <p>Click here to see your <a style = "text-decoration:none; color: #0ABAB5;" href="purchase_history.php">purchase history</a></p>
+         <a href="home_page_2.php"><button type="button">Back</button></a>
 
  </body>
 

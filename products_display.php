@@ -20,7 +20,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <div class="wrapper-users">
         <header class="fixed-header">
-            <a href="home_page.html"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+            <a href="home_page.php"><img src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
 
             <div class="edit-div">
                 <form action="edit_product.php" method="POST">

@@ -15,11 +15,11 @@
 <body>
     <div class="wrapper">
         <header class="fixed-header">
-            <a href="home_page.html"><img style="margin: 0;" src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
+            <a href="home_page_2.php"><img style="margin: 0;" src="resources/fashionee_logo-removebg-preview.png" alt="logo" class="logo"></a>
 
         </header>
 
-        <section class="selections"  style="margin-top: 4.9em;">
+        <section class="selections"  style="margin-top: 2em;">
             <hr>
             <ul>
                 <li class="women"><p><a href="women_home.php">Women</a></p>
@@ -70,17 +70,42 @@
                 for ($x = 0; $x < mysqli_num_rows($result); $x++) {
                     $row = mysqli_fetch_array($result);
                     echo "<div class='gallery-item'>";
-                    echo "<img alt = 'product' style = 'width:13em; height: 15em;' src='product_images/" . $row[6] . "'>";
+                    echo "<img alt = 'product' style = 'object-fit:cover; width:13em; height: 20em;' src='product_images/" . $row[6] . "'>";
                     echo "<div>";
                     echo "<p class = 'item-name'>" . $row['name'] . "</p>";
                     echo "<p class = 'item-desc'>" . $row['description'] . "</p>";
                     echo "<p class = 'item-price'>Ksh " . $row['price'] . "</p>";
-                    echo "<button onclick = 'myFunction()' style = 'width: 100%; height: 3.5em; border-radius: 5px; font-size: .9em;' class = 'add-to-cart'><a href = 'add_cart.php?id=".$row['id']."'>ADD TO CART</a></button>";
+                    echo "<form method = 'post'>";
+                    echo "<input type = 'hidden' name = 'product_id' value = ". $row['id'].">";
+                    echo "<button name = 'add_cart' onclick = 'myFunction()' style = 'width: 100%; height: 3.5em; border-radius: 5px; font-size: .9em;' class = 'add-to-cart'>ADD TO CART</button>";
+                    echo "</form>";
                     echo "</div>";
                     echo "</div>";
-                }   
+                   
+                }
+                if(isset($_POST['add_cart'])){
 
+                    $product_id = $_POST['product_id'];
+                    
 
+                    $stmt = $conn->prepare('SELECT `price` FROM `products` WHERE id = ?');
+                    $stmt->bind_param('i', $product_id);
+                    $stmt->execute();
+                    $stmt->bind_result($price);
+                    $stmt->fetch();
+                    $stmt->close();
+                
+                    $stmt = $conn->prepare('SELECT MAX(id) FROM `cart` WHERE `customer_id` = ?');
+                    $stmt->bind_param('i', $_SESSION['id']);
+                    $stmt->execute();
+                    $stmt->bind_result($cart_id);
+                    $stmt->fetch();
+                    $stmt->close();
+                    
+                    $sql2 = "INSERT INTO `cart_details` (`cart_id`, `product_id`, `product_price`, `order_total`) VALUES ('$cart_id', '$product_id', '$price','$price')";
+                    mysqli_query($conn, $sql2);
+                }
+            
                 ?>
         </section>
         <div id="popup">Product added to cart</div>
@@ -98,6 +123,6 @@
   x.className = "show";
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
 }
 </script>

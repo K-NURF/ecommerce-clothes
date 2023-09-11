@@ -84,98 +84,49 @@
         </section>
 
         <section class ="hero">
-            <button type="button" class="shop-now">SHOP NOW</button>
+            <a href="login.php"><button type="button" class="shop-now">SHOP NOW</button></a>
             <div class="trending-hero">
-                <p class="title">No.1 <em>Trending</em></p>
-                <img class="slides" src="resources/mahdi-bafande-XCU9ZV_ys5w-unsplash.jpg" alt="Trending Fashion">
-                <img class="slides" src="resources/alexi-romano-CCx6Fz_CmOI-unsplash.jpg" alt="Trending Fashion">
-                <img class="slides" src="resources/dom-hill-nimElTcTNyY-unsplash.jpg" alt="Trending Fashion">
+                <p class="title"><em>Trending Picks</em></p>
+                <?php
+                require("connect.php");
+                $sql = "SELECT `image`, `id` FROM `products` LIMIT 5";
+                $result = mysqli_query($conn, $sql);
+
+                for ($x = 0; $x < mysqli_num_rows($result); $x++) {
+                    $row = mysqli_fetch_array($result);
+                
+                    echo "<a href = 'view_product.php?id=".$row['id']."' ><img class='slides' src='product_images/".$row['image']."' alt='Trending Picks'></a>";
+                }
+
+                ?>
+
                 <p class=" description">Awesome Designer combos, <em>True Fashionee!</em></p>
-                <button class = "buy-now">BUY NOW</button>
+                <a href="login.php"><button class = "buy-now">BUY NOW</button></a>
             </div>
         </section>
 
         <section class ="top-clothes">
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <img src="resources/840269010.jpg" alt="product">
-                <div>
-                    <p class = "item-name">White t-shirt</p>
-                    <p class = "item-price">Ksh 899</p>
-                </div>
-                <button class = "add-to-cart">Add to Cart</button>
-            </div>
+            <?php
+                require("connect.php");
+
+                $sql = "SELECT * FROM `products` WHERE `is_deleted` = 0 ORDER BY `id` DESC LIMIT 10";
+                $result = mysqli_query($conn, $sql);
+
+                for ($x = 0; $x < mysqli_num_rows($result); $x++) {
+                    $row = mysqli_fetch_array($result);
+                    echo "<div class='gallery-item'>";
+                    echo "<img alt = 'product' style = 'object-fit:cover; width:13em; height: 20em;' src='product_images/" . $row[6] . "'>";
+                    echo "<div>";
+                    echo "<p class = 'item-name'>" . $row['name'] . "</p>";
+                    echo "<p class = 'item-desc'>" . $row['description'] . "</p>";
+                    echo "<p class = 'item-price'>Ksh " . $row['price'] . "</p>";
+                    echo "<a href = 'add_cart.php?id=".$row['id']."'><button onclick = 'myFunction()' style = 'width: 100%; height: 3.5em; border-radius: 5px; font-size: .9em;' class = 'add-to-cart'>ADD TO CART</button></a>";
+                    echo "</div>";
+                    echo "</div>";
+                }   
+
+
+                ?>
         </section>
 
         <section class="official-partners">
@@ -251,7 +202,7 @@
           myIndex++;
           if (myIndex > x.length) {myIndex = 1}    
           x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 5000);
+          setTimeout(carousel, 3000);
         }
 
         const menu = document.querySelector('.menu')
