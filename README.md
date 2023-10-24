@@ -23,7 +23,7 @@ Follow these steps to set up and run the e-commerce web application:
     You can clone the repository using Git:
 
     ```bash
-    git clone https://github.com/yourusername/ecommerce-web-app.git
+    git clone https://github.com/K-NURF/ecommerce-clothes.git
     ```
 
     Or download the repository as a ZIP file and extract it to your desired location.
