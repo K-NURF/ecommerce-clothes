@@ -4,7 +4,7 @@ This is a simple e-commerce web application built using PHP and MySQL, designed 
 
 ## Prerequisites
 
-Before you can run this project, you will need the following software installed on your Windows machine:
+Before you can run this project, you will need the following software installed on your machine:
 
 1. **Web Server:** You can use Apache, XAMPP, or any other web server of your choice.
 
